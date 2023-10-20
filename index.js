@@ -1,0 +1,93 @@
+// TODO: Include packages needed for this application
+const { generate } = require('rxjs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const inquirer = require('inquirer');
+
+// TODO: Create an array of questions for user input
+const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'Enter the title of your project:'
+    },
+    // need more questions
+    {
+        type: 'input',
+        name: 'description',
+        message: 'What is your project about? Give a description'
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+    {
+        type: 'input',
+        name: 'install',
+        message: 'How do you install your application?'
+    }
+];
+
+// This is what your answers object will look like once all
+// the questions have been answered...
+/*
+{
+    title: "Here's your title",
+    description: "Some description",
+    install: "Just click install"
+}
+*/
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) { 
+
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    //console.log("Hi, you ran a Node application!");
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            // Use user feedback for... whatever!!
+            // now that you hve answers, call your function generateMarkdown, and pass them in as the outside data
+            //calling the function
+            const myMarkdown = generateMarkdown(answers);
+            // return myMarkdown
+            return myMarkdown;
+        })
+        .then((yourGeneratedMarkdown) => {
+            // now you can run your function writeToFile
+            writeToFile('README.md', yourGeneratedMarkdown);
+        })
+        .catch((error) => {
+            if (error.isTtyError) {
+                // Prompt couldn't be rendered in the current environment
+            } else {
+                // Something else went wrong
+            }
+        });
+}
+
+// Function call to initialize app
+init();
