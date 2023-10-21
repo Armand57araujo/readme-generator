@@ -15,7 +15,7 @@
 - [License](#license)
 
 
-[Video Link](https://watch.screencastify.com/v/GKGqvzL1Yl4USKcs6qdi)
+[Appliction Demo Video Link](https://watch.screencastify.com/v/GKGqvzL1Yl4USKcs6qdi)
 
     
     ## Installation
