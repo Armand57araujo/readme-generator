@@ -32,15 +32,6 @@ const questions = [
         message: 'How many collaborators were apart of your application?'
 
     },
-
-
-
-
-
-
-
-
-
     {
         type: 'input',
         name: 'license',

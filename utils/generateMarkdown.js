@@ -18,6 +18,31 @@ function renderLicenseBadge(license) {
   }
 
 }
+const badgeMIT = renderLicenseBadge('MIT')
+const badgeApache = renderLicenseBadge('Apache 2.0')
+const badgeGPL = renderLicenseBadge('GPL 3.0')
+const invalidBadge = renderLicenseBadge('Invalid License')
+
+console.log(badgeMIT);
+console.log(badgeApache);
+console.log(badgeGPL);
+console.log(invalidBadge);
+
+
+
+
+
+const licenseLinkMIT = renderLicenseLink('MIT')
+const licenseLinkApache = renderLicenseLink('Apache 2.0')
+const licenseLinkGPL = renderLicenseLink('GPL 3.0')
+const invalidlicenseLink = renderLicenseLink('Invalid License')
+
+console.log(licenseLinkMIT);
+console.log(licenseLinkApache);
+console.log(licenseLinkGPL);
+console.log(invalidlicenseLink);
+
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string - almost done
@@ -40,23 +65,34 @@ function renderLicenseLink(license) {
 
 }
 
+
+const licenseSectionMIT = renderLicenseSection('MIT')
+const licenseSectionApache = renderLicenseSection('Apache 2.0')
+const licenseSectionGPL = renderLicenseSection('GPL 3.0')
+const invalidlicenseSection = renderLicenseSection('Invalid License')
+
+console.log(licenseSectionMIT);
+console.log(licenseSectionApache);
+console.log(licenseSectionGPL);
+console.log(invalidlicenseSection);
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   switch (license) {
 
-    case license1:
+    case 'MIT':
       return `## License
 
       This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).`;
 
-    case license2:
+    case 'Apache 2.0':
       return `
       ## License
       
       This project is licensed under the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).`;
 
-    case license3:
+    case 'GPL 3.0':
       return `
       ## License
       
@@ -124,5 +160,6 @@ function generateMarkdown(data) {
     ${data.questions}
     `;
 }
+
 
 module.exports = generateMarkdown;
