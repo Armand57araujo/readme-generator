@@ -2,12 +2,12 @@
 
   ![license badge](https://img.shields.io/badge/license-MIT-blue.svg)
     
-    ## Description
+  ## Description
     
     Add your project description here.
     In this project we created a ReadMe Generator that uses user input.
 
-    ## Table of Contents
+  ## Table of Contents
     
 - [Installation](#installation)
 - [Usage](#usage)
