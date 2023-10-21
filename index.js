@@ -1,7 +1,10 @@
 // TODO: Include packages needed for this application
-const { generate } = require('rxjs');
+// const { generate } = require('rxjs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -28,14 +31,15 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'collaborators',
+        name: 'credits',
         message: 'How many collaborators were apart of your application?'
 
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'What licenses are associated with your application?'
+        message: 'What licenses are associated with your application?',
+        choices: ['MIT', 'Apache'],
     },
     {
         type: 'input',
@@ -82,35 +86,31 @@ const questions = [
 */
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { 
+function writeToFile(fileName, data) {
+
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 
 }
+
 
 // TODO: Create a function to initialize app
 function init() {
     //console.log("Hi, you ran a Node application!");
     inquirer
-        .prompt(questions)
-        .then((answers) => {
+        .prompt(questions).then((answers) => {
             // Use user feedback for... whatever!!
             // now that you hve answers, call your function generateMarkdown, and pass them in as the outside data
             //calling the function
-            const myMarkdown = generateMarkdown(answers);
-            // return myMarkdown
-            return myMarkdown;
-        })
-        .then((yourGeneratedMarkdown) => {
             // now you can run your function writeToFile
-            writeToFile('README.md', yourGeneratedMarkdown);
-        })
-        .catch((error) => {
-            if (error.isTtyError) {
-                // Prompt couldn't be rendered in the current environment
-            } else {
-                // Something else went wrong
-            }
+            writeToFile('README_Template.md', generateMarkdown({ ...answers }));
         });
+        
 }
 
 // Function call to initialize app
+
 init();
+
+
+
+
