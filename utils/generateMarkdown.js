@@ -34,14 +34,14 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
     
-    ## Description
+## Description
     
-    Add your project description here.
-    ${data.description}
+Add your project description here.
+${data.description}
 
-    ## Table of Contents
+## Table of Contents
     
 - [Installation](#installation)
 - [Usage](#usage)
