@@ -20,33 +20,65 @@ const questions = [
         type: 'input',
         name: 'install',
         message: 'How do you install your application?'
-    }
+    },
     {
         type: 'input',
-        name: 'install',
-        message: 'How do you install your application?'
-    }
+        name: 'usage',
+        message: 'How do you use your application?'
+    },
     {
         type: 'input',
-        name: 'install',
-        message: 'How do you install your application?'
-    }
+        name: 'collaborators',
+        message: 'How many collaborators were apart of your application?'
+
+    },
+
+
+
+
+
+
+
+
+
     {
         type: 'input',
-        name: 'install',
-        message: 'How do you install your application?'
-    }
+        name: 'license',
+        message: 'What licenses are associated with your application?'
+    },
     {
         type: 'input',
-        name: 'install',
-        message: 'How do you install your application?'
-    }
+        name: 'badges',
+        message: 'What badges are associated with your application?'
+    },
     {
         type: 'input',
-        name: 'install',
-        message: 'How do you install your application?'
-    }
+        name: 'features',
+        message: 'What are the features of your application?'
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'How can one contribute to your application?'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'How do you test your application?'
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'How do submit questions regarding your application?'
+    },
 ];
+
+
+
+
+
+
+
 
 // This is what your answers object will look like once all
 // the questions have been answered...
