@@ -1,11 +1,11 @@
-# README_Template
+# ReadMe_Template Generator
 
   ![license badge](https://img.shields.io/badge/license-MIT-blue.svg)
     
     ## Description
     
     Add your project description here.
-    ReadMe Generating App
+    In this project we created a ReadMe Generator that uses user input.
 
     ## Table of Contents
     
@@ -18,17 +18,17 @@
     ## Installation
     
     Add installation instructions here.
-    npm i
+    Using npm i
 
     ## Usage
    
     Add usage instructions here.
-    user input
+    Through user input
 
     ## Credits
 
     Credit collaborators here.
-    Armand
+    No other collaborators
     
     ## License
     
@@ -43,20 +43,20 @@
     ## Features.
 
     Associated Features
-    None
+    It Is A ReadMe Generator
     
     ## Contributing
     
     If you'd like to contribute, please follow these guidelines...
-    Do not
+    Please Don't
     
     ## Tests
     
     Add test instructions here.
-    You can't
+    No Thank You
     
     ## Questions
     
     If you have any questions, feel free to [contact me](mailto:armand_araujo@yahoo.com).
-    Via Email @ armand_araujo@yahoo.com
+    Please contact me by email.
     
